@@ -1,0 +1,3 @@
+var defaultHeaders = {
+  'apikey': 'GCb9-_dpet4gJfhvIr-divW-ZAtpmATMCkMd2NwMz0Ijj8-_QBzRcsggvfkEAwYjtIprD2lU19KoZh5O9T2wAZa8sWgBVF-mxv1puHcNid4lFDTHRIBTnzs_svg4KLZeIIavZ9f5UK1jeeALsoV3dTy9evgBV3JEhxLHNXvUpNEV0YxS3snx4nSDvHU-6JlE8d7eiBgDK44ejY7h81IBlaIoGVXhtQiFFz2Dzw4wP4-72qQEY2Av3fnWb1m7JOm-cyrAxFGyhB0SVoT4RLxFNY-K3M3iyg53tAOGKnTRh8dmdRKorwwHZLQaNqwNQdnw'
+};
