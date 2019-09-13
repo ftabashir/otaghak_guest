@@ -1,60 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:otaghak_guest/repository/model/index-response.dart' as models;
 
-class RoomWidget extends StatelessWidget {
-  final models.Room room;
-
-  const RoomWidget({Key key, this.room}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Card(
-          child: new Container(
-            padding: new EdgeInsets.all(8),
-            child: new Column(
-              children: <Widget>[
-                Text(
-                  room.title,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                SizedBox(
-                  width: 200,
-                  height: 200,
-                  child: Image.network(room.imageUrl),
-                ),
-              ],
-            ),
-          ),
-        )
-      ],
-    );
-  }
-}
-
-class BoxWidget extends StatelessWidget {
-  final models.Box box;
-
-  const BoxWidget({Key key, this.box}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Text(box.categoryName),
-        SizedBox(
-            height: 300,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children:
-                  box.rooms.map((room) => RoomWidget(room: room)).toList(),
-            ))
-      ],
-    );
-  }
-}
+import '../repository/model/index-response.dart' as models;
+import 'box.dart';
 
 class IndexWidget extends StatelessWidget {
   final Future<models.IndexResponse> index;
