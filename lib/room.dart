@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:otaghak_guest/repository/model/index-response.dart' as models;
 
 class RoomWidget extends StatelessWidget {
@@ -63,6 +64,13 @@ class IndexWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('fa', 'IR'),
+      ],
       locale: Locale('fa', 'IR'),
       title: 'Fetch Data Example',
       theme: ThemeData(
