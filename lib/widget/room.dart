@@ -36,7 +36,10 @@ class RoomWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(room.title),
+                Text(
+                  room.title,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
                 Text(room.cityName),
                 Row(
                   children: <Widget>[

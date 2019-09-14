@@ -21,9 +21,7 @@ class IndexWidget extends StatelessWidget {
       ],
       locale: Locale('fa', 'IR'),
       title: 'Fetch Data Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'IranSans'),
       home: Scaffold(
         appBar: AppBar(
           title: Text('Otaghak'),
