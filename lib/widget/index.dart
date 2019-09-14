@@ -40,7 +40,14 @@ class IndexWidget extends StatelessWidget {
                             ))
                         .toList());
               } else if (snapshot.hasError) {
-                return Text("${snapshot.error}");
+                return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "${snapshot.error}",
+                        textAlign: TextAlign.center,
+                      )
+                    ]);
               }
 
               // By default, show a loading spinner.
