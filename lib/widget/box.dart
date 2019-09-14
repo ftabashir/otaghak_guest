@@ -14,7 +14,7 @@ class BoxWidget extends StatelessWidget {
       children: <Widget>[
         Text(box.categoryName),
         SizedBox(
-            height: 300,
+            height: 240,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children:
