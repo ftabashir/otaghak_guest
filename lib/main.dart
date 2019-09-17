@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:otaghak_guest/widget/home.dart';
 
-import 'repository/room-repo.dart';
-import 'widget/index.dart';
 
-void main() => runApp(IndexWidget(index: fetchIndex()));
+
+void main() => runApp(HomeWidget());
