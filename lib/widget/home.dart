@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:otaghak_guest/const/app-strings.dart';
 import 'package:otaghak_guest/repository/room-repo.dart';
 import 'package:otaghak_guest/res/app_icons.dart';
 import 'package:otaghak_guest/widget/index.dart';
@@ -50,15 +51,15 @@ class HomeState extends State<HomeWidget> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(AppIcons.explore),
-              title: Text('گشت‌و‌گذار'),
+              title: Text(AppStrings.explore),
             ),
             BottomNavigationBarItem(
               icon: Icon(AppIcons.favorite),
-              title: Text('پسندیده‌ها'),
+              title: Text(AppStrings.favorites),
             ),
             BottomNavigationBarItem(
               icon: Icon(AppIcons.profile),
-              title: Text('نیم‌رخ'),
+              title: Text(AppStrings.profile),
             ),
           ],
         ),
