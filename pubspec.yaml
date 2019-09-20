@@ -56,5 +56,6 @@ flutter:
         - asset: asset/font/IRANSansMobile(FaNum)_Medium.ttf
           weight: 500
 
-  assets:
-    - asset/icon/explore.svg
+    - family:  Otaghak
+      fonts:
+        - asset: asset/font/otaghak-icons/Otaghak.ttf

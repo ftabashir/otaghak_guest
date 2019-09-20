@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:otaghak_guest/icon/asset-icon.dart';
 import 'package:otaghak_guest/repository/room-repo.dart';
+import 'package:otaghak_guest/res/app_icons.dart';
 import 'package:otaghak_guest/widget/index.dart';
 import 'package:otaghak_guest/widget/placeholder.dart';
 
@@ -50,18 +49,16 @@ class HomeState extends State<HomeWidget> {
           currentIndex: _currentIndex,
           items: [
             BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                AssetIcon.explore,
-              ),
-              title: new Text('Home'),
+              icon: Icon(AppIcons.explore),
+              title: Text('گشت‌و‌گذار'),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.mail),
-              title: new Text('Messages'),
+              icon: Icon(AppIcons.favorite),
+              title: Text('پسندیده‌ها'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              title: Text('Profile'),
+              icon: Icon(AppIcons.profile),
+              title: Text('نیم‌رخ'),
             ),
           ],
         ),
