@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:otaghak_guest/icon/asset-icon.dart';
 import 'package:otaghak_guest/repository/room-repo.dart';
 import 'package:otaghak_guest/widget/index.dart';
 import 'package:otaghak_guest/widget/placeholder.dart';
@@ -48,7 +50,9 @@ class HomeState extends State<HomeWidget> {
           currentIndex: _currentIndex,
           items: [
             BottomNavigationBarItem(
-              icon: new Icon(Icons.home),
+              icon: SvgPicture.asset(
+                AssetIcon.explore,
+              ),
               title: new Text('Home'),
             ),
             BottomNavigationBarItem(
