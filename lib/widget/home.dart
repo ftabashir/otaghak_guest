@@ -15,11 +15,38 @@ class HomeWidget extends StatefulWidget {
 
 class HomeState extends State<HomeWidget> {
   int _currentIndex = 0;
-  final List<Widget> _children = [
-    IndexWidget(index: fetchIndex()),
-    PlaceholderWidget(Colors.cyan),
-    PlaceholderWidget(Colors.teal),
-  ];
+
+  final _homeNavKey = GlobalKey<NavigatorState>();
+  final _placeholderNavKey1 = GlobalKey<NavigatorState>();
+  final _placeholderNavKey2 = GlobalKey<NavigatorState>();
+
+  var _children;
+
+  HomeState() {
+    _children = <Widget>[
+      Navigator(
+        key: _homeNavKey,
+        onGenerateRoute: (route) => MaterialPageRoute(
+          settings: route,
+          builder: (context) => IndexWidget(index: fetchIndex()),
+        ),
+      ),
+      Navigator(
+        key: _placeholderNavKey1,
+        onGenerateRoute: (route) => MaterialPageRoute(
+          settings: route,
+          builder: (context) => PlaceholderWidget(Colors.cyan),
+        ),
+      ),
+      Navigator(
+        key: _placeholderNavKey2,
+        onGenerateRoute: (route) => MaterialPageRoute(
+          settings: route,
+          builder: (context) => PlaceholderWidget(Colors.teal),
+        ),
+      ),
+    ];
+  }
 
   void onTabTapped(int index) {
     setState(() {
@@ -44,7 +71,10 @@ class HomeState extends State<HomeWidget> {
         appBar: AppBar(
           title: Text('Otaghak'),
         ),
-        body: _children[_currentIndex],
+        body: IndexedStack(
+          index: _currentIndex,
+          children: _children,
+        ),
         bottomNavigationBar: BottomNavigationBar(
           onTap: onTabTapped,
           currentIndex: _currentIndex,
